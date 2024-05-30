@@ -1,0 +1,502 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+button {
+  background: none;
+  color: white;
+}
+
+.container {
+  min-height: 100vh; /* min-h-screen */
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+  background: linear-gradient(
+    to right,
+    #1e293b,
+    #0f172a
+  ); /* bg-gradient-to-r from-slate-800 to-slate-950 */
+  color: #ffffff; /* text-white */
+  font-size: 0.875rem; /* text-sm */
+}
+
+@media (min-width: 640px) {
+  /* sm breakpoint */
+  .container {
+    font-size: 1rem; /* sm:text-base */
+  }
+}
+
+span {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.heroContainer {
+  min-height: 100vh; /* min-h-screen */
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+  gap: 2.5rem; /* gap-10 */
+  align-items: center; /* items-center */
+  justify-content: center; /* justify-center */
+  text-align: center; /*  text-center */
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.heroContainer span {
+  color: #60a5fa;
+}
+
+.heroContainer .hero-para span {
+  font-weight: 500;
+}
+
+.hero-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-text-custom {
+  text-transform: uppercase; /* uppercase */
+  font-weight: light; /* font-bold */
+  font-size: 2.2rem; /* text-4xl */
+}
+
+@media (min-width: 540px) {
+  /* sm breakpoint */
+  .hero-text-custom {
+    font-size: 3.75rem; /* text-5xl */
+  }
+}
+
+@media (min-width: 668px) {
+  /* md breakpoint */
+  .hero-text-custom {
+    font-size: 4.5rem; /* text-6xl */
+  }
+}
+
+@media (min-width: 9024px) {
+  /* lg breakpoint */
+  .hero-text-custom {
+    font-size: 6rem; /* text-7xl */
+  }
+}
+
+.hero-para {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 300; /* font-light */
+}
+
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .hero-para {
+    font-size: 1rem; /* text-base */
+  }
+}
+
+.hero-button {
+  border-radius: 0.375rem; /* rounded-md */
+  border: 2px solid #60a5fa; /* border-blue-400 */
+  padding: 1rem 2rem 1rem 2rem; /* px-8 py-4 */
+  background-color: rgb(2 6 23);
+  box-shadow: 3px 3px 0 0 #06a5fa;
+  color: white;
+  transition-duration: 200ms;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.hero-button:hover {
+  transform: translate(-3px -3px);
+  box-shadow: 6px 6px 0 0 #06a5fa;
+}
+
+.sectionContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 1rem 0;
+}
+
+.sectionContainer-div {
+  background-color: rgb(2 6 23);
+  padding: 2.5rem 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionContainer-div p {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sectionContainer-div h2 {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 640px) {
+  .sectionContainer-div h2 {
+    font-size: 2.25rem; /* Equivalent to 36px */
+  }
+}
+
+@media (min-width: 768px) {
+  .sectionContainer-div h2 {
+    font-size: 3rem; /* Equivalent to 48px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectionContainer-div h2 {
+    font-size: 3.75rem; /* Equivalent to 60px */
+  }
+}
+
+.sectionContainer-div h2 span {
+  color: rgb(96 165 250);
+}
+
+.sectionContainer-second-div {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem auto 2.5rem auto;
+  padding: 1rem;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.headerContainer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.headerContainer div p {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: rgb(148 163 184);
+}
+
+@media (min-width: 540px) {
+  .headerContainer div p {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 668px) {
+  .headerContainer div p {
+    font-size: 4.5rem;
+  }
+}
+
+.headerContainer div h4 {
+  font-size: large;
+}
+
+@media (min-width: 540px) {
+  .headerContainer div h4 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 668px) {
+  .headerContainer div h4 {
+    font-size: 2.5rem;
+  }
+}
+
+.headerPara {
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.generatorCon {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1rem;
+  margin-left: 1rem;
+  grid-gap: 1rem;
+}
+
+.generatorConBtn {
+  border: rgb(37 99 235);
+}
+
+@media (min-width: 640px) {
+  .generatorCon {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.generatorCon:first-child {
+  margin-top: 0;
+}
+
+.generatorCon:nth-child(2n + 1) {
+  margin-left: 0;
+}
+
+.generatorCon button {
+  background-color: rgb(2 6 23);
+  border-color: rgb(96 165 250);
+  padding: 1rem 0;
+  border-radius: 8px;
+  transition-duration: 200ms;
+}
+
+.generatorCon button:hover {
+  border-color: rgb(37 99 235);
+}
+
+.generatorCon button p {
+  text-transform: capitalize;
+}
+
+.generatorConTwo {
+  background-color: rgb(2 6 23);
+  border: 2px solid rgb(37 99 235);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.generatorConTwo button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.generatorConTwo button p {
+  text-transform: capitalize;
+}
+
+.generatorConTwo button i {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  transform: translateY(0.5rem);
+}
+
+.generatorConThree {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 576px) {
+  .generatorConThree {
+    grid-template-columns: repeat(1, minmax(0, 3fr));
+  }
+}
+
+.generatorConThree .schemeBtn {
+  border: rgb(37 99 235);
+}
+
+/* .schemeBtn {
+  border-color: rgb(2 6 23);
+} */
+
+.generatorConThree button {
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: rgb(2 6 23);
+  border-color: rgb(96 165 250);
+  padding: 1rem 0;
+  border-radius: 8px;
+  transition-duration: 200ms;
+}
+
+.generatorConThree button:hover {
+  border-color: rgb(37 99 235);
+}
+
+.showModalContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.showModalContainer button:hover {
+  color: rgb(96 165 250);
+  transition-duration: 200ms;
+}
+
+.muscleGroup {
+  text-transform: uppercase;
+}
+
+.muscleGroupBtn {
+  color: rgb(37 99 235);
+}
+
+.workoutSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ExerciseCardContainer {
+  padding: 1rem; /* p-4: 4 * 0.25rem = 1rem */
+  border-radius: 0.375rem; /* rounded-md: medium rounded corners */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* gap-4: 4 * 0.25rem = 1rem */
+  background-color: rgb(2, 6, 23); /* bg-slate-950 */
+}
+
+@media (min-width: 640px) {
+  .ExerciseCardContainer {
+    flex-wrap: wrap; /* sm:flex-wrap */
+  }
+}
+
+.exerciseInnerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Reset any previous horizontal gap */
+}
+@media (min-width: 640px) {
+  .exerciseInnerContainer {
+    flex-direction: row; /* sm:flex-row */
+    align-items: center; /* sm:items-center */
+    flex-wrap: wrap; /* sm:flex-wrap */
+    column-gap: 1rem; /* gap-x-4: 4 * 0.25rem = 1rem */
+  }
+}
+
+.exerciseInnerContainerHeading {
+  font-size: 1.875rem; /* text-3xl: 1.875rem (30px) */
+  display: none; /* hidden */
+  font-weight: 600; /* font-semibold */
+  color: rgb(148 163 184); /* text-slate-400 */
+
+  @media (min-width: 640px) {
+    display: inline; /* sm:inline */
+    font-size: 2.25rem; /* sm:text-4xl: 2.25rem (36px) */
+  }
+
+  @media (min-width: 768px) {
+    font-size: 3rem; /* md:text-5xl: 3rem (48px) */
+  }
+}
+
+.exerciseInnerContainerHeadingTwo {
+  text-transform: capitalize; /* capitalize */
+  white-space: nowrap; /* whitespace-nowrap */
+  overflow: hidden; /* truncate */
+  text-overflow: ellipsis; /* truncate */
+  max-width: 100%; /* max-w-full */
+  font-size: 1.125rem; /* text-lg: 1.125rem (18px) */
+  flex: 1; /* flex-1 */
+
+  @media (min-width: 640px) {
+    font-size: 1.25rem; /* sm:text-xl: 1.25rem (20px) */
+    text-align: center; /* sm:text-center */
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem; /* md:text-2xl: 1.5rem (24px) */
+  }
+}
+
+.exerciseInnerContainerPara {
+  font-size: 0.875rem; /* text-sm: 0.875rem (14px) */
+  color: rgb(148 163 184); /* text-slate-400 */
+  text-transform: capitalize;
+}
+
+.ExerciseCardContainerDivThree {
+  color: rgb(148 163 184); /* text-slate-400 */
+  font-size: 0.875rem;
+}
+
+.ExerciseCardContainerSecondDiv {
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+  background-color: rgb(2, 6, 23); /* bg-slate-950 */
+  border-radius: 0.375rem; /* rounded: medium rounded corners */
+  gap: 0.5rem;
+}
+
+.ExerciseCardContainerAnotherDiv {
+  display: grid; /* grid */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* grid-cols-2 */
+  gap: 0.5rem; /* gap-2: 2 * 0.25rem = 0.5rem */
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* sm:grid-cols-4 */
+    place-items: center; /* sm:place-items-center */
+  }
+}
+
+.resultDiv {
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+  padding: 0.5rem; /* p-2: 2 * 0.25rem = 0.5rem */
+  border-radius: 0.375rem; /* rounded: medium rounded corners */
+  border-width: 1.5px; /* border-[1.5px] */
+  border-style: solid; /* border-solid */
+  border-color: rgb(15, 23, 42); /* border-slate-900 */
+  width: 100%;
+}
+
+.resultHeading {
+  text-transform: capitalize; /* capitalize */
+  color: rgb(148 163 184); /* text-slate-400 */
+  font-size: 0.875rem;
+}
+
+.resultButton {
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+  padding: 0.5rem; /* p-2: 2 * 0.25rem = 0.5rem */
+  border-radius: 0.375rem; /* rounded: medium rounded corners */
+  border-width: 1.5px; /* border-[1.5px] */
+  border-style: solid; /* border-solid */
+  border-color: rgb(30, 58, 138); /* border-blue-900 */
+  width: 100%; /* w-full */
+  transition: border-color 0.2s; /* duration-200: 200ms transition duration */
+
+  &:hover {
+    border-color: rgb(37, 99, 235); /* hover:border-blue-600 */
+  }
+}
+
+.resultButtonHeading {
+  color: rgb(148, 163, 184); /* text-slate-400 */
+  font-size: 0.875rem; /* text-sm: 0.875rem (14px) */
+  text-transform: capitalize;
+}
